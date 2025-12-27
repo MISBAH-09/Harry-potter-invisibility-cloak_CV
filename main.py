@@ -20,7 +20,7 @@ for i in range(60):
         continue
     frame = cv2.flip(frame, 1)
     frames.append(frame.astype(np.float32))
-    cv2.imshow("Background", frame)
+    cv2.imshow("Capturing Background", frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
