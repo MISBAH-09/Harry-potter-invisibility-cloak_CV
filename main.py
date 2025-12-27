@@ -14,13 +14,13 @@ print("Webcam initialized successfully")
 # Capture background
 frames = []
 print("Capturing background... Please move out of the frame.")
-for i in range(60):  # Capture 60 frames (~2 seconds at 30fps)
+for i in range(60):  
     ret, frame = camera.read()
     if not ret:
         continue
     frame = cv2.flip(frame, 1)
     frames.append(frame.astype(np.float32))
-    cv2.imshow("Capturing Background", frame)
+    cv2.imshow("Background", frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
